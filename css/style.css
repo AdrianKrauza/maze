@@ -1,0 +1,126 @@
+:root {
+    --sizeMaze: 11;
+    --size: calc(25vw / var(--sizeMaze));
+}
+
+@media (max-width: 1500px) {
+    :root {
+        --size: calc(50vw / var(--sizeMaze));
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #FC466B;
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+    background: linear-gradient(to right, #3F5EFB, #FC466B);
+
+}
+
+#box div {
+    float: left;
+    width: var(--size);
+    height: var(--size);
+    background-color: rgba(255, 255, 255, 0.767);
+    transition: .3s;
+}
+
+
+#box {
+    background-color: rgba(255, 255, 255, 0.315);
+    width: calc(var(--size) * var(--sizeMaze));
+    height: calc(var(--size) * var(--sizeMaze));
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.body {
+    background: #ffd40094 !important;
+    transition: 1s;
+}
+
+#head {
+    border-radius: 100%;
+    background: rgba(156, 39, 176, 0.91) !important;
+    transition: 0s !important;
+}
+
+#timer {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 1s;
+}
+@media (max-width: 950px) {
+    #timer {
+        font-size: 2rem;
+    }
+}@media (max-width: 550px) {
+    #timer {
+        font-size: 1.5rem;
+    }
+}
+#time {
+    float: left;
+    position: absolute;
+    width: calc(var(--size) * var(--sizeMaze));
+    z-index: -1;
+}
+/* *::after */
+/* *::before */
+#rest {
+    width: 30%;
+    height: 50px;
+    border: 3px solid white;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    float: left;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+
+
+#type {
+    width: 30%;
+    height: 50px;
+    border: 3px solid white;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0);
+    float: right;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+#rest:hover,#type:hover {
+    background: rgba(0, 0, 0, 0.096);
+}
+option {
+    width: 150px;
+    height: 50px;
+    border: 3px solid white;
+    background: #f8f8f8;
+    color: #5c5b5b;
+    padding: 10px;
+}
+
+select:hover {
+    color: #444645;
+    background: #ddd;
+    }
+
+
+#bar {
+    width: calc(var(--size) * var(--sizeMaze));
+    display: block;
+    margin: auto;
+    padding: 10px;
+
+}
